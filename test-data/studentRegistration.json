@@ -1,0 +1,16 @@
+{
+    "firstName": "Gerimedica",
+    "lastName": "BV",
+    "email": "test@test.com",
+    "gender": "Male",
+    "mobile": "0123456789",
+    "subject": "Physics",
+    "hobbies": "Reading",
+    "currentAddress": "Netherlands",
+    "state": "NCR",
+    "city": "Delhi",
+    "date": "15",
+    "month": "January",
+    "year": "1990",
+    "fileName": "profile.jpeg"
+}
