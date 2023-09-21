@@ -15,6 +15,7 @@ test.describe('user flow functionality', () => {
     test.beforeEach(async ({ page }) => {
         homePage = new HomePage(page)
         elementsPage = new ElementsPage(page)
+        webTablesPage = new WebTablesPage(page)
         await homePage.openURL()
         await homePage.validateHomePage()
         await homePage.clickOnCategory('Elements')
