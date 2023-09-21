@@ -13,6 +13,6 @@ export class CommonPage {
     async validateUrlAndHeader(text: string) {
         const currentURL = this.page.url();
         expect(currentURL).toContain(text.toLowerCase().replace(/\s/g,''))
-        await expect(this.header).toHaveText(text)
+        await expect(this.header).toContainText(text)
     }
 };

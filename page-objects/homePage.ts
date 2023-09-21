@@ -12,7 +12,7 @@ export class HomePage {
 
     async openURL() {
         await this.page.goto('/');
-        await this.page.waitForLoadState('networkidle');
+        await this.page.waitForLoadState('domcontentloaded');
     }
 
     async validateHomePage() {
@@ -24,4 +24,4 @@ export class HomePage {
     async clickOnCategory(elementName: string) {
         await this.page.locator(`//div[@class="card-body"]/h5[contains(text(),"${elementName}")]`).click();
     }
-};
+}

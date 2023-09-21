@@ -16,6 +16,8 @@ test.describe('user flow functionality', () => {
         homePage = new HomePage(page)
         elementsPage = new ElementsPage(page)
         webTablesPage = new WebTablesPage(page)
+        commonPage = new CommonPage(page)
+        
         await homePage.openURL()
         await homePage.validateHomePage()
         await homePage.clickOnCategory('Elements')
@@ -27,13 +29,13 @@ test.describe('user flow functionality', () => {
     test('TC01- Scenario A - Verify user can enter new data into the table', async () => {
         await webTablesPage.addNewRecord.click()
         await webTablesPage.fillRegistrationForm(registerdata)
-        await webTablesPage.searchField.fill(registerdata.firstName)
+        await webTablesPage.searchField.fill(registerdata.email)
         await webTablesPage.validateUserData(registerdata)
     })
 
     test('TC01- Scenario B - Verify user can edit the row in a table', async () => {
-        const updatedFirstName = "“Gerimedica”"
-        const updatedLasttName = "BV"
+        const updatedFirstName = registerdata.updatedFirstName
+        const updatedLasttName = registerdata.updatedLastName
 
         await webTablesPage.secondRowEditBtn.click()
         await webTablesPage.firstName.clear()

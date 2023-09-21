@@ -30,24 +30,24 @@ export class WebTablesPage {
     }
 
     async fillRegistrationForm(userDetails: any){
-        this.firstName.fill(userDetails.firstName);
-        this.lastName.fill(userDetails.lastName);
-        this.userEmail.fill(userDetails.email);
-        this.age.fill(userDetails.age);
-        this.salary.fill(userDetails.salary);
-        this.department.fill(userDetails.department);
-        this.submitBtn.click();
+        await this.firstName.fill(userDetails.firstName);
+        await this.lastName.fill(userDetails.lastName);
+        await this.userEmail.fill(userDetails.email);
+        await this.age.fill(userDetails.age);
+        await this.salary.fill(userDetails.salary);
+        await this.department.fill(userDetails.department);
+        await this.submitBtn.click();
     }
 
     async validateTableData(index: number, expectedText: string){
-        expect(await this.page.locator(`.rt-tbody .rt-tr-group:first-child .rt-td:nth-child(${index})`)).toHaveText(expectedText)
+        await expect(this.page.locator(`.rt-tbody .rt-tr-group:first-child .rt-td:nth-child(${index})`)).toHaveText(expectedText)
     }
 
     async validateUserData(userDetails: any){
         await this.validateTableData(1, userDetails.firstName)
         await this.validateTableData(2, userDetails.lastName)
-        await this.validateTableData(3, userDetails.email)
-        await this.validateTableData(4, userDetails.age)
+        await this.validateTableData(3, userDetails.age)
+        await this.validateTableData(4, userDetails.email)
         await this.validateTableData(5, userDetails.salary)
         await this.validateTableData(6, userDetails.department)
     }
