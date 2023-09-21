@@ -6,7 +6,11 @@ import { PractiseFormPage } from '../../page-objects/practiseFormPage'
 import studentData from '../../test-data/studentRegistration.json'
 
 
-test.describe('broken image functionality', () => {
+test.describe('Form submission functionality', () => {
+
+    test.use({
+        viewport: { width: 1600, height: 1200 },
+    });
 
     test('TC03 - Verify user can submit the form.', async ({ page }) => {
         let homePage = new HomePage(page)
