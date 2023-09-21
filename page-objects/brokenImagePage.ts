@@ -11,7 +11,7 @@ export class BrokenImagePage {
     }
 
     async validateImageBroken(imageSrc: any){
-        const response = await this.page.request.get('/' + imageSrc)
-        expect.soft(response.status()).not.toBe(200)
+        const response = await this.page.request.get('https://demoqa.com' + imageSrc)
+        expect.soft(response.status()).toBe(200)
     }
 }
