@@ -19,7 +19,7 @@ const btoa = (str: string) => Buffer.from(str).toString('base64');
 const credentialsBase64 = btoa(`${username}:${password}`);
 const authHeader = { 'Authorization': `Basic ${credentialsBase64}` };
 
-test('1. Creation of user account', async ({ baseURL }) => {
+test('1. Creation of user account @api', async ({ baseURL }) => {
     const requestCall = await request.newContext()
     let body = {
         userName: username,
@@ -40,7 +40,7 @@ test('1. Creation of user account', async ({ baseURL }) => {
     expect(Array.isArray(content.books)).toBe(true);
 })
 
-test('2. Try to create another user with same credentials', async ({ baseURL }) => {
+test('2. Try to create another user with same credentials @api', async ({ baseURL }) => {
     const requestCall = await request.newContext()
     let body = {
         userName: username,
@@ -57,7 +57,7 @@ test('2. Try to create another user with same credentials', async ({ baseURL }) 
     });
 })
 
-test('3. Add a list of books', async ({ baseURL }) => {
+test('3. Add a list of books @api', async ({ baseURL }) => {
     const requestCall = await request.newContext()
     let body = {
         userId: userId,
@@ -76,7 +76,7 @@ test('3. Add a list of books', async ({ baseURL }) => {
     expect(content.books[0].isbn).toEqual(isbn)
 })
 
-test('4. Adding the same book for the same user', async ({ baseURL }) => {
+test('4. Adding the same book for the same user @api', async ({ baseURL }) => {
     const requestCall = await request.newContext()
     let body = {
         userId: userId,
@@ -94,7 +94,7 @@ test('4. Adding the same book for the same user', async ({ baseURL }) => {
     });
 })
 
-test('5. Remove one of the added books', async ({ baseURL }) => {
+test('5. Remove one of the added books @api', async ({ baseURL }) => {
     const requestCall = await request.newContext()
     let body = {
         userId: userId,
@@ -104,7 +104,7 @@ test('5. Remove one of the added books', async ({ baseURL }) => {
     expect(response.status()).toBe(204)
 })
 
-test('6. Try to remove book without basic auth token', async ({ baseURL }) => {
+test('6. Try to remove book without basic auth token @api', async ({ baseURL }) => {
     const requestCall = await request.newContext()
     let body = {
         userId: userId,

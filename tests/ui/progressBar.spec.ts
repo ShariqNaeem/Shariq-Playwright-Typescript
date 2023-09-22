@@ -6,7 +6,7 @@ import { ProgressBarPage } from '../../page-objects/progressBarPage'
 
 test.describe('Progess bar functionality', () => {
 
-    test('TC04 - Verify the progress bar', async ({ page }) => {
+    test('TC04 - Verify the progress bar @ui', async ({ page }) => {
         let homePage = new HomePage(page)
         let elementsPage = new ElementsPage(page)
         let commonPage = new CommonPage(page)
