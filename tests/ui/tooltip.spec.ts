@@ -6,7 +6,7 @@ import { TooltipPage } from '../../page-objects/tooltipPage'
 
 test.describe('Tool tips functionality', () => {
 
-    test('TC05 - Verify the tooltip', async ({ page }) => {
+    test('TC05 - Verify the tooltip @ui', async ({ page }) => {
         let homePage = new HomePage(page)
         let elementsPage = new ElementsPage(page)
         let commonPage = new CommonPage(page)

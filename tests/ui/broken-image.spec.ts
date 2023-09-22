@@ -6,7 +6,7 @@ import { BrokenImagePage } from '../../page-objects/brokenImagePage'
 
 test.describe('broken image functionality', () => {
 
-    test('TC02 - Verify broken image', async ( {browser} ) => {
+    test('TC02 - Verify broken image @ui', async ( {browser} ) => {
         let context = await browser.newContext();
         let page = await context.newPage()
 

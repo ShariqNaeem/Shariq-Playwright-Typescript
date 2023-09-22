@@ -12,7 +12,7 @@ test.describe('Form submission functionality', () => {
         viewport: { width: 1600, height: 1200 },
     });
 
-    test('TC03 - Verify user can submit the form.', async ({ page }) => {
+    test('TC03 - Verify user can submit the form @ui', async ({ page }) => {
         let homePage = new HomePage(page)
         let elementsPage = new ElementsPage(page)
         let commonPage = new CommonPage(page)

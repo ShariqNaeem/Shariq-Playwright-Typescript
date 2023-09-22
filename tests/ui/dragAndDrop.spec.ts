@@ -6,7 +6,7 @@ import { DragAndDropPage } from '../../page-objects/dragAndDropPage'
 
 test.describe('Drag and drop functionality', () => {
 
-    test('TC06 - Verify user can drag and drop', async ({ page }) => {
+    test('TC06 - Verify user can drag and drop @ui', async ({ page }) => {
         let homePage = new HomePage(page)
         let elementsPage = new ElementsPage(page)
         let commonPage = new CommonPage(page)
