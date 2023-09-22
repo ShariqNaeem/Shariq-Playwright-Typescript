@@ -19,12 +19,11 @@ test.describe('Progess bar functionality', () => {
         await elementsPage.clickOnLeftMenu('Progress Bar')
         await expect(commonPage.header).toContainText('Progress Bar')
 
+        await expect(progressBarPage.progressBarField).toHaveAttribute('aria-valuenow','0')
+        await expect(progressBarPage.startStopButton).toContainText('Start')
         await progressBarPage.startStopButton.click()
-        const progressBarField = await page.$('div[role="progressbar"]')
-        let flag = await progressBarField?.waitForSelector('//div[@aria-valuenow="50"]')
-        if (flag) {
-            await progressBarPage.startStopButton.click()
-            await page.waitForTimeout(10000)
-        }
+        await expect(progressBarPage.startStopButton).toContainText('Stop')
+        await expect(progressBarPage.progressBarField).toHaveAttribute('aria-valuenow','100')
+        await expect(progressBarPage.resetBtn).toContainText('Reset')
     })
 })

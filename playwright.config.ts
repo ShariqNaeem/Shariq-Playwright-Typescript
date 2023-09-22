@@ -25,7 +25,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   expect: {
     // Maximum time expect() should wait for the condition to be met.
-    timeout: 10000,
+    timeout: 15000,
   },
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
