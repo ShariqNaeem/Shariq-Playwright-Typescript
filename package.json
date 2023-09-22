@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "chrome-ui-tests": "npx playwright test --grep @ui --project=chromium",
+    "chrome-api-tests": "npx playwright test --grep @api --project=chromium",
+    "chrome-all-tests": "npx playwright test --project=chromium"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ShariqNaeem/Shariq-GM-Assignment.git"
