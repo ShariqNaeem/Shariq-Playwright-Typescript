@@ -6,9 +6,13 @@ This project is a demonstration of automated testing using Playwright with TypeS
 
 ### Install Dependencies
 Navigate to the project root directory and run the following command to install the necessary dependencies:
-npm install
+
+```npm install```
+
 or
-npx playwright install
+
+```npx playwright install```
+
 
 ### Running the Test Cases
 You can run the test cases using the following npm scripts:
