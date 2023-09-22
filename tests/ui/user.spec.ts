@@ -26,14 +26,14 @@ test.describe('user flow functionality', () => {
         await commonPage.validateUrlAndHeader('Web Tables')
     })
 
-    test('TC01- Scenario A - Verify user can enter new data into the table', async () => {
+    test('TC01- Scenario A - Verify user can enter new data into the table @ui', async () => {
         await webTablesPage.addNewRecord.click()
         await webTablesPage.fillRegistrationForm(registerdata)
         await webTablesPage.searchField.fill(registerdata.email)
         await webTablesPage.validateUserData(registerdata)
     })
 
-    test('TC01- Scenario B - Verify user can edit the row in a table', async () => {
+    test('TC01- Scenario B - Verify user can edit the row in a table @ui', async () => {
         const updatedFirstName = registerdata.updatedFirstName
         const updatedLasttName = registerdata.updatedLastName
 
