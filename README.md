@@ -1,6 +1,6 @@
 # Shariq-Playwright-Typescript
 
-This project is a demonstration of automated testing using Playwright with TypeScript for the DEMOQA Application.
+This project is a demonstration of automated testing using **Playwright** with **TypeScript** for the **DEMOQA** Application.
 
 ## Getting Started
 
@@ -37,11 +37,11 @@ You can run the test cases using the following npm scripts:
 ### Project Structure
 The project structure is organized as follows:
 
-* test/ui: Contains all the UI test cases.
-* test/api: Contains all the API test cases.
-* page-objects: Contains all the page files where locators and functions are defined for code reusability.
-* test-data: Contains data used in UI and API test cases, following a data-driven approach.
-* utils: Contains utility functions, including request calls (POST and DELETE) and a random string generator for usernames (useful for creating new users in tests).
+* test/ui: Contains all the **UI** test cases.
+* test/api: Contains all the **API** test cases.
+* page-objects: Contains all the page files where locators and functions are defined for **code reusability**.
+* test-data: Contains data used in UI and API test cases, following a **data-driven** approach.
+* utils: Contains **utility** functions, including request calls **(POST and DELETE)** and a random string generator for usernames (useful for creating new users in tests).
 * resources: Contains files and images used in test cases for uploading files during student registration.
 
 Feel free to explore the project structure and customize it according to your requirements.
