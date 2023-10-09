@@ -1,4 +1,4 @@
-# Shariq-GM-Assignment
+# Shariq-Playwright-Assignment
 
 This project is a demonstration of automated testing using Playwright with TypeScript for the DEMOQA Application.
 
